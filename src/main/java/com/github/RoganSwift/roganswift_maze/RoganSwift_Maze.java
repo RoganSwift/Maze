@@ -1,5 +1,6 @@
 package com.github.RoganSwift.roganswift_maze;
 
+import com.github.RoganSwift.roganswift_maze.init.ItemInit;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -22,6 +23,7 @@ public class RoganSwift_Maze
     public RoganSwift_Maze()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        ItemInit.ITEMS.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
